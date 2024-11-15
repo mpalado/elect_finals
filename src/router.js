@@ -7,6 +7,7 @@ import QuestionsThrid from './components/QuestionsThrid.vue';
 import QuestionsFourt from './components/QuestionsFourt.vue';
 import QuestionsFifth from './components/QuestionsFifth.vue';
 import QuestionsSix from './components/QuestionsSix.vue';
+import LastPage from './components/LastPage.vue';
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/six',
     name: 'QuestionsSix',
     component: QuestionsSix,
+  },
+  {
+    path: '/last',
+    name: 'LastPage',
+    component: LastPage,
   },
 ];
 

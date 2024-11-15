@@ -8,8 +8,8 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About the Test</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/intro">About the Test</a></li>
             <li><a href="#">Results/Insights</a></li>
             <li><a href="#">Account</a></li>
             <router-link to="/" class="take-test-button">Take the Test</router-link>
@@ -125,6 +125,29 @@
     padding: 20px;
     background-color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .take-test-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00a7e1;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .app-header nav ul li a {
+  color: black; /* Set link color to black */
+  text-decoration: none;
+  font-weight: bold;
+  }
+  
+  .app-header nav ul li a:hover {
+    color: #333; /* Dark gray on hover, or change to any color you prefer */
   }
   
   .logo {

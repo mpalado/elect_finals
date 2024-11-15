@@ -8,14 +8,15 @@
         </div>
         <nav class="nav">
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About the Test</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/intro">About the Test</a></li>
             <li><a href="#">Results/Insights</a></li>
             <li><a href="#">Account</a></li>
             <router-link to="/intro" class="take-test-button">Take the Test</router-link>
           </ul>
         </nav>
       </header>
+      
   
       <!-- Intro Section -->
       <section class="intro-section">
@@ -28,6 +29,12 @@
         <div class="background-graphics">
           <img src="@/assets/brain-image.gif" alt="Brain Diagram" />
         </div>
+        <div class="circle circle1"></div>
+  <div class="circle circle2"></div>
+  <div class="circle circle3"></div>
+  <div class="circle circle4"></div>
+  <div class="circle circle5"></div>
+  <div class="circle circle6"></div>
       </section>
   
       <!-- About Test Section -->
@@ -139,8 +146,39 @@
     padding: 20px;
     background-color: white;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    
+  }
+  .app-header nav ul li a {
+  color: black; /* Set link color to black */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+  
   }
   
+  .app-header nav ul li a:hover {
+    color: #333; /* Dark gray on hover, or change to any color you prefer */
+  }
+  .take-test-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #00a7e1;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+/* Optional: Add a hover effect */
+.take-test-button:hover {
+    background-color: #008fb5; /* Darker shade for hover effect */
+    color: white;
+}
+
   .logo {
     display: flex;
     align-items: center;
@@ -175,11 +213,14 @@
     background-color: #f4f4f4;
     display: flex;
     align-items: center;
+    overflow: hidden; /* Ensure circles stay within bounds */
   }
   
   .intro-content {
     max-width: 500px;
     margin-left: 20px;
+    position: relative; /* Relative positioning gives it a higher stacking context */
+    z-index: 1; /* Content will be on top */
   }
   
   .discover-button {
@@ -195,6 +236,64 @@
     max-width: 700px;
     opacity: 10;
   }
+
+  /* Slightly Darker Background Circles */
+ .circle {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 1; /* Full opacity for a stronger effect */
+  z-index: 0;
+}
+
+/* Circle Styles */
+.circle1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #FFB4AA, transparent);
+  top: -100px;
+  left: -150px;
+}
+
+.circle2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, #B6E29C, transparent);
+  top: 150px;
+  right: -120px;
+}
+
+.circle3 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, #FFE08A, transparent);
+  bottom: -50px;
+  left: -100px;
+}
+
+.circle4 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, #A0D5FF, transparent);
+  bottom: 100px;
+  right: 50px;
+}
+
+.circle5 {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, #FFA2CA, transparent);
+  top: 250px;
+  left: 200px;
+}
+
+.circle6 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, #8FD5E3, transparent);
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+}
   
   /* About Test Section */
   .about-test-section {

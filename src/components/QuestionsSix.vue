@@ -4,8 +4,8 @@
         <img src="@/assets/brian.png" alt="M.I. Profiler Logo" class="logo" />
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About the Test</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/intro">About the Test</a></li>
             <li><a href="#">Results/Insights</a></li>
           </ul>
         </nav>
@@ -32,7 +32,7 @@
         </div>
       </div>
   
-      <router-link to="/">
+      <router-link to="/last">
             <button class="start-test-button">Next</button>
           </router-link>
     </div>
