@@ -9,6 +9,7 @@ import QuestionsFifth from './components/QuestionsFifth.vue';
 import QuestionsSix from './components/QuestionsSix.vue';
 import LastPage from './components/LastPage.vue';
 
+
 const routes = [
   {
     path: '/',
